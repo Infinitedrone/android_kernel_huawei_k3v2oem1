@@ -420,7 +420,7 @@ static int hi6421_irq_resume(struct platform_device *pdev)
 	return ret;
 }
 #endif
-static struct platform_driver hi6421_irq_driver = {
+static struct platform_driver __initdata hi6421_irq_driver = {
 	.probe = hi6421_irq_probe,
 	.remove = hi6421_irq_remove,
 	#ifdef CONFIG_PM
